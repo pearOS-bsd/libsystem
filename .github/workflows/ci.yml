@@ -1,0 +1,9 @@
+name: build and test
+on: [push, pull_request, workflow_dispatch]
+jobs:
+  libclosure:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build the Blocks runtime and run its tests (our runtime is linked, not the system's)
+        run: make -C src/libclosure test

@@ -8,5 +8,10 @@ Everything under `upstream/` is unmodified source of other open projects, copied
 | `upstream/libpthread` | apple-oss-distributions/libpthread | `42d026d` | APSL 2.0 | 205 (1101 KB) |
 | `upstream/libplatform` | apple-oss-distributions/libplatform | `2512ffd` | Apache-2.0 | 134 (559 KB) |
 | `upstream/libmalloc` | apple-oss-distributions/libmalloc | `c49dafa` | APSL 2.0 | 218 (2676 KB) |
-| `upstream/libclosure` | apple-oss-distributions/libclosure | `3668b08` | APSL 2.0 | 136 (513 KB) |
+| `upstream/libclosure` | apple-oss-distributions/libclosure | `3668b08` | **unresolved**: the files say `@APPLE_LLVM_LICENSE_HEADER@` (a placeholder never expanded) and the repository has no LICENSE; it was listed here as APSL 2.0 without proof. Not used. The same runtime with an explicit licence is in `src/libclosure` (below). | 136 (513 KB) |
 | `upstream/xnu-libsyscall` | apple-oss-distributions/xnu (libsyscall/ only) | `f6217f8` | APSL 2.0 | 253 (1130 KB) |
+
+## Adapted into our code (`src/`)
+| folder | origin | licence | what we changed |
+|---|---|---|---|
+| `src/libclosure` | apple/swift-corelibs-libdispatch `src/BlocksRuntime` (copy in `../libdispatch/upstream/swift-corelibs-libdispatch`) | Apache-2.0 with Runtime Library Exception (in the file headers) | nothing in the sources; own Makefile and test (see `src/libclosure/CHANGES`) |

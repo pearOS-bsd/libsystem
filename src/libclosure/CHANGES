@@ -1,0 +1,5 @@
+libclosure: changes against the origin
+Origin: apple/swift-corelibs-libdispatch src/BlocksRuntime (see ../../PROVENANCE.md), licence Apache-2.0 with Runtime Library Exception (header of every file, kept).
+runtime.c, data.c, Block_private.h: identical to the origin (no change).
+include/Block.h: identical to the origin's Block.h.
+Makefile: ours (BSD-2-Clause), builds libclosure.a and runs ../../test/blocks_test.c with the host clang (-fblocks), linking this runtime instead of the system's.
